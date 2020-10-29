@@ -51,7 +51,8 @@ header {
 }
 
 main {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .article-container {
@@ -77,4 +78,38 @@ article {
     background-color: #09101b;
     color: lightskyblue;
     padding: 15px;
+}
+
+.login-container {
+    border: 4px solid lightskyblue;
+    margin: 15px;
+    width: 30%;
+    text-align: left;
+    padding: 10px;
+    min-width: 500px;
+}
+
+.login-container label {
+    position: fixed;
+    visibility: hidden;
+}
+
+.login-container input {
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: lightskyblue;
+    color: #09101b;
+    padding: 2px;
+    font-size: 20px;
+    min-width: 200px;
+}
+
+.login-container form {
+    margin: 5px 0;
 }
