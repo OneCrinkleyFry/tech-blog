@@ -4,8 +4,7 @@
   "description": " A CMS style blog for publishing articles, blog posts, thoughts and opinions",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "start": "server.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
