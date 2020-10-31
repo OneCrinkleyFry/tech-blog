@@ -6,7 +6,7 @@ const { Post, User, Comment } = require('../models');
 router.get('/', (req, res) => {
 
     Post.findAll({
-        attributes: ['id', 'post_url', 'title', 'created_at',
+        attributes: ['id', 'post_text', 'title', 'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         order: [['created_at', 'DESC']],
@@ -60,7 +60,7 @@ router.get('/logout', (req, res) => {
 router.get('/post/:id', (req, res) => {
     const post = Post.findOne({
         where: { id: req.params.id },
-        attributes: ['id', 'post_url', 'title', 'created_at',
+        attributes: ['id', 'post_text', 'title', 'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         order: [['created_at', 'DESC']],
