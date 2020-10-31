@@ -1,0 +1,21 @@
+<div>
+    <h2>Create a Post</h2>
+    <form class="post-form">
+        <label for="post_title">Title</label>
+        <input id="post-title" name="post-title" />
+        <div>
+            <textarea name="post_text"></textarea>
+        </div>
+        <button type="submit">Create Post</button>
+    </form>
+</div>
+
+{{!-- {{#if posts.length}} --}}
+<hr>
+<section class = "post-list">
+    <h2>Your Posts</h2>
+    {{!-- {{#each posts as |post|}} --}}
+        {{> article}}
+    {{!-- {{/each}} --}}
+</section>
+{{!-- {{/if}} --}}
