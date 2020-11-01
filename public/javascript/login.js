@@ -7,7 +7,7 @@ async function createProfileHandler(event) {
 
     if (username && email && password) {
         const response = await fetch('/api/users/', {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify({
                 username,
                 email,
@@ -16,7 +16,7 @@ async function createProfileHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         })
 
-        if (response.ok) console.log('success');
+        if (response.ok) document.location.replace('/dashboard');
         else alert(response.statusText);
     }
 }
@@ -28,7 +28,7 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
     if (email && password) {
         const response = await fetch('/api/users/login', {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify({
                 email,
                 password
