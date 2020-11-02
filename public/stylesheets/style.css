@@ -133,20 +133,6 @@ button:hover, .header-container nav a:hover {
 .main-post {
     width: 80%;
 }
-#vote-up-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: darkolivegreen;
-    color:white;
-}
-#vote-up-btn:hover {
-    color: white;
-    background-color: darkgreen;
-    transition: all .5s;
-    border: white 2px inset;
-}
 .post-list {
     margin-top: 15px;
 }

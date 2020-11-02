@@ -10,9 +10,15 @@
             <p>{{post.post_text}}</p>
         </div>
     </article>
+    {{#if loggedIn}}
     <hr>
-    {{> comment-forms}}
-    {{#if post.comments.length}}
-
+        {{> comment-forms}}
     {{/if}}
+
+    {{#if post.comments}}
+        {{#each post.comments as |comment|}}
+            {{> comments comment}}
+        {{/each}}
+    {{/if}}
+
 </div>
