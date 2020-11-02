@@ -4,15 +4,6 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    // User.findOne({
-    //     where: {
-    //         id: req.session.user_id
-    //     }
-    // })
-    // .then(dbUserData => {
-    //     const user = dbUserData.get({ plain: true });
-    //     console.log(user);
-    // })
     Post.findAll({
         where: { user_id: req.session.user_id },
         attributes: ['id', 'post_text', 'title', 'created_at',

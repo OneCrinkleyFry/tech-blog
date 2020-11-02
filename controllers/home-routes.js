@@ -30,7 +30,6 @@ router.get('/', (req, res) => {
             res.render('homepage', { posts, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
-            console.log(err);
             res.status(500).json(err);
         })
 });
@@ -85,11 +84,9 @@ router.get('/post/:id', (req, res) => {
                 return;
             }
             const post = dbPostData.get({ plain: true });
-            console.log(post);
             res.render('single-post', { post, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
-            console.log(err);
             res.status(500).json(err);
         })
 });

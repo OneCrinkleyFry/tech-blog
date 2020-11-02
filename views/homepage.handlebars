@@ -1,13 +1,5 @@
 <div class="article-container">
     {{#each posts as |post|}}
-    <article class="post" onclick="loadPost({{post.id}})">
-        <div class="article-header">
-            <h2>{{post.title}}</h2>
-            <p>Created on {{format_date post.created_at}}</p>
-        </div>
-        <div class="article-text">
-            <p>{{post.post_text}}</p>
-        </div>
-    </article>
+        {{> post-info post}}
     {{/each}}
 </div>

@@ -1,7 +1,7 @@
 <div class="post-page">
     <section>
         <h2>Create a Post</h2>
-        <form class="post-form">
+        <form class="new-post-form">
             <label for="post-title">Title</label>
             <input id="post-title" name="post-title" placeholder="Title" />
             <div>
@@ -10,8 +10,15 @@
             <button type="submit" id="create-post-btn">Create Post</button>
         </form>
     </section>
+    {{#if posts.length}}
     <hr>
     <section class="post-list">
         <h2>Your Posts</h2>
+        {{#each posts as |post|}}
+            {{> post-info post}}
+        {{/each}}
     </section>
+    {{/if}}
 </div>
+
+<script src="/javascript/add-post.js"></script>
