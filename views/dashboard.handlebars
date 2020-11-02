@@ -15,10 +15,15 @@
     <section class="post-list">
         <h2>Your Posts</h2>
         {{#each posts as |post|}}
-            {{> post-info post}}
+        {{> post-info post}}
+        <div class="edit-buttons">
+            <a href="/edit/{{post.id}}">Edit</a>
+            <button type="button" class="delete-btn" id="{{post.id}}">Delete</button>
+        </div>
         {{/each}}
     </section>
     {{/if}}
 </div>
 
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

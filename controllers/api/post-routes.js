@@ -89,6 +89,7 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 router.delete('/:id', withAuth, (req, res) => {
+
     Post.destroy({ where: { id: req.params.id } })
         .then(dbPostData => {
             if (!dbPostData) {
@@ -98,6 +99,7 @@ router.delete('/:id', withAuth, (req, res) => {
             res.json(dbPostData);
         })
         .catch(err => {
+            console.log(err);
             res.status(500).json(err);
         });
 });

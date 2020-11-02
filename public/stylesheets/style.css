@@ -6,6 +6,9 @@ body {
     background-color: #09101b;
     color: lightskyblue;
 }
+a {
+    text-decoration: none;
+}
 header {
     background-color: lightskyblue;
     color: #09101b;
@@ -85,7 +88,7 @@ label {
     font-size: 18px;
     border-radius: 5px;
 }
-button, .header-container nav a {
+button, .header-container nav a, .post-list a {
     border: none;
     border-radius: 10px;
     background-color: lightskyblue;
@@ -95,10 +98,10 @@ button, .header-container nav a {
     min-width: max-content;
     margin-bottom: 15px;
 }
-button:hover, .header-container nav a:hover {
+button:hover, .header-container nav a:hover, .post-list a:hover {
     color: lightskyblue;
     background-color: #09101b;
-    transition: all .5s;
+    transition: all .2s;
     border: white 2px inset;
 }
 .login-container form {
@@ -136,6 +139,15 @@ button:hover, .header-container nav a:hover {
 .post-list {
     margin-top: 15px;
 }
+.edit-buttons {
+    width: max-content;
+    display: flex;
+}
+
+.delete-btn {
+    margin-left: 15px;
+}
+
 .comment {
     background-color: lightskyblue;
     color: #09101b;
