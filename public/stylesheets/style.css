@@ -20,6 +20,8 @@ header {
 
 .header-container nav a, .header-container nav button {
     margin: 15px;
+    padding: 3px;
+    border-radius: 10px;
 }
 
 .header-container nav a {
@@ -112,4 +114,55 @@ label {
 
 .login-container form {
     margin: 5px 0;
+}
+
+.post-page {
+    width: 80%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.post-page h2 {
+    font-size: 28px;
+}
+
+#post-title, #post-text, #create-post-btn {
+    border-radius: 10px;
+}
+
+#post-title, #post-text {
+    width: 80%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+#post-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#post-text {
+    height: 100px;
+}
+
+#create-post-btn {
+    width: 15%;
+    min-width: max-content;
+    font-size: 24px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: lightskyblue;
+    color: #09101b;
+
+}
+
+.post-list {
+    margin-top: 15px;
+}
+
+.header-container nav a:hover, .header-container nav button:hover, #create-post-btn:hover {
+    color: lightskyblue;
+    background-color: #09101b;
+    transition: all .5s;
+    border: white 2px inset;
 }
