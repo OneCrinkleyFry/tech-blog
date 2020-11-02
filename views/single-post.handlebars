@@ -12,13 +12,15 @@
     </article>
     {{#if loggedIn}}
     <hr>
-        {{> comment-forms}}
+    {{> comment-forms}}
     {{/if}}
 
     {{#if post.comments}}
+    <div class="comments">
         {{#each post.comments as |comment|}}
-            {{> comments comment}}
+        {{> comments comment}}
         {{/each}}
+    </div>
     {{/if}}
 
 </div>

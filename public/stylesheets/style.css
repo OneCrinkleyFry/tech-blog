@@ -136,3 +136,19 @@ button:hover, .header-container nav a:hover {
 .post-list {
     margin-top: 15px;
 }
+.comment {
+    background-color: lightskyblue;
+    color: #09101b;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.comment .meta {
+    background-color: #09101b;
+    color: lightskyblue;
+    padding: 2px;
+    border: inset 2px white;
+    border-radius: 5px;
+}
